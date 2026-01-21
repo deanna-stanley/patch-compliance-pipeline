@@ -1,0 +1,20 @@
+[
+  {
+    "hostname": "SRV-WEB-01",
+    "os": "Windows Server 2022",
+    "lastPatchDate": "2025-01-03",
+    "missingPatches": ["KB5034123", "KB5033055"]
+  },
+  {
+    "hostname": "SRV-API-01",
+    "os": "Windows Server 2019",
+    "lastPatchDate": "2025-01-10",
+    "missingPatches": []
+  },
+  {
+    "hostname": "SRV-DB-01",
+    "os": "Windows Server 2022",
+    "lastPatchDate": "2024-12-12",
+    "missingPatches": ["KB5034123", "KB5033055", "KB5032190", "KB5031364", "KB5029966"]
+  }
+]
