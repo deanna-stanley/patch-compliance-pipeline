@@ -1,0 +1,11 @@
+# PowerShell + general
+*.log
+*.tmp
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Local env files (if added later)
+.env
+.env.*
