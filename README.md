@@ -3,13 +3,18 @@
 A PowerShell-based patch compliance reporting pipeline (inventory → compliance evaluation → report).
 
 ## Status
-Work in progress. First milestone: generate a markdown compliance summary from sample inventory data.
+Active development. Core pipeline executes end-to-end and generates a compliance summary from sample inventory data.
 
 ## Tech
 - PowerShell 7 (pwsh)
 - GitHub Actions (planned)
 - Pester tests (planned)
 
-## Run (coming soon)
+## Run
+Requires PowerShell 7+.
+
 ```powershell
 pwsh ./src/run-compliance.ps1
+
+This generates a markdown compliance report at:
+reports/compliance-summary.md
