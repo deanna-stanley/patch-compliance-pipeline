@@ -1,20 +1,109 @@
 [
-  {
-    "hostname": "SRV-WEB-01",
-    "os": "Windows Server 2022",
-    "lastPatchDate": "2025-01-03",
-    "missingPatches": ["KB5034123", "KB5033055"]
-  },
-  {
-    "hostname": "SRV-API-01",
-    "os": "Windows Server 2019",
-    "lastPatchDate": "2025-01-10",
-    "missingPatches": []
-  },
-  {
-    "hostname": "SRV-DB-01",
-    "os": "Windows Server 2022",
-    "lastPatchDate": "2024-12-12",
-    "missingPatches": ["KB5034123", "KB5033055", "KB5032190", "KB5031364", "KB5029966"]
-  }
+    {
+        "hostname": "SRV-WEB-01",
+        "os": "Windows Server 2022",
+        "lastScanDate": "2026-07-10",
+        "lastPatchInstallDate": "2026-07-08",
+        "missingPatches": ["KB5034123"],
+        "exemptions": []
+    },
+    {
+        "hostname": "SRV-DB-01",
+        "os": "Windows Server 2022",
+        "lastScanDate": "2026-07-10",
+        "lastPatchInstallDate": "2026-07-06",
+        "missingPatches": [
+            "KB5034123",
+            "KB5033055",
+            "KB5032190",
+            "KB5031364",
+            "KB5029966"
+        ],
+        "exemptions": [
+            {
+                "kb": "KB5034123",
+                "reason": "Scheduled for decommission Q3",
+                "expires": "2026-10-01"
+            },
+            {
+                "kb": "KB5029966",
+                "reason": "Scheduled for decommission Q3",
+                "expires": "2026-10-01"
+            }
+        ]
+    },
+    {
+        "hostname": "SRV-FILE-01",
+        "os": "Windows Server 2019",
+        "lastScanDate": "2026-07-10",
+        "lastPatchInstallDate": "2026-07-07",
+        "missingPatches": [],
+        "exemptions": []
+    },
+    {
+        "hostname": "SRV-WEB-02",
+        "os": "Windows Server 2022",
+        "lastScanDate": "2026-07-10",
+        "lastPatchInstallDate": "2026-07-08",
+        "missingPatches": ["KB5032156"],
+        "exemptions": []
+    },
+    {
+        "hostname": "SRV-WEB-03",
+        "os": "Windows Server 2022",
+        "lastScanDate": "2026-07-10",
+        "lastPatchInstallDate": "2026-07-08",
+        "missingPatches": ["KB5033055"],
+        "exemptions": []
+    },
+    {
+        "hostname": "SRV-DB-02",
+        "os": "Windows Server 2022",
+        "lastScanDate": "2026-07-10",
+        "lastPatchInstallDate": "2026-07-06",
+        "missingPatches": ["KB5033055", "KB5032190", "KB5032156", "KB5031145"],
+        "exemptions": []
+    },
+    {
+        "hostname": "SRV-DB-03",
+        "os": "Windows Server 2022",
+        "lastScanDate": "2026-07-10",
+        "lastPatchInstallDate": "2026-07-06",
+        "missingPatches": [
+            "KB5034123",
+            "KB5033055",
+            "KB5032190",
+            "KB5032156",
+            "KB5031145"
+        ],
+        "exemptions": []
+    },
+    {
+        "hostname": "SRV-DB-04",
+        "os": "Windows Server 2022",
+        "lastScanDate": "2026-07-10",
+        "lastPatchInstallDate": "2026-07-06",
+        "missingPatches": [
+            "KB5034123",
+            "KB5033055",
+            "KB5032190",
+            "KB5032156",
+            "KB5031145"
+        ],
+        "exemptions": [
+            {
+                "kb": "KB5034123",
+                "reason": "Scheduled for decommission Q2",
+                "expires": "2026-07-01"
+            }
+        ]
+    },
+    {
+        "hostname": "SRV-FILE-02",
+        "os": "Windows Server 2019",
+        "lastScanDate": "2026-07-10",
+        "lastPatchInstallDate": "2026-07-07",
+        "missingPatches": ["KB5034127", "KB5033089"],
+        "exemptions": []
+    }
 ]
