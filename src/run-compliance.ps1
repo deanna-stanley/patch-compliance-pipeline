@@ -8,7 +8,7 @@ $inventoryPath = Join-Path $PSScriptRoot '..\data\sample-inventory.json'
 $approvedPath  = Join-Path $PSScriptRoot '..\data\approved-patches.json'
 $reportPath    = Join-Path $PSScriptRoot '..\reports\compliance-summary.md'
 
-$inventory = Get-PatchInventory -Path $inventoryPath
+$inventory = Get-HostInventory -Path $inventoryPath
 
 $approvedRaw = Get-Content -Path $approvedPath -Raw | ConvertFrom-Json
 $approved = @($approvedRaw.approvedPatches)

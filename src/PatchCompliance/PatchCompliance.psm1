@@ -4,7 +4,8 @@ Get-ChildItem -Path $publicFunctionsPath -Filter '*.ps1' | ForEach-Object {
 }
 
 Export-ModuleMember -Function @(
-    'Get-PatchInventory',
+    'Get-HostInventory',
+    'Get-ApprovedBaseline',
     'Test-PatchCompliance',
     'Write-ComplianceReport'
 )
