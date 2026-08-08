@@ -14,8 +14,8 @@
     "Windows Server 2019": {
       "effectiveDate": "2026-07-10",
       "patches": [
-        { "kb": "KB5034127", "severity": "Critical",  "releaseDate": "2026-06-10" },
-        { "kb": "KB5033089", "severity": "Important", "releaseDate": "2026-05-08" }
+        { "kb": "KB5033089", "severity": "Important", "releaseDate": "2026-05-08" },
+        { "kb": "KB5034127", "severity": "Critical",  "releaseDate": "2026-06-10" }
       ]
     }
   }

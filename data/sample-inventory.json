@@ -105,5 +105,19 @@
         "lastPatchInstallDate": "2026-07-07",
         "missingPatches": ["KB5034127", "KB5033089"],
         "exemptions": []
+    },
+    {
+        "hostname": "SRV-FILE-03",
+        "os": "Windows Server 2019",
+        "lastScanDate": "2026-07-10",
+        "lastPatchInstallDate": "2026-07-07",
+        "missingPatches": ["KB5034127"],
+        "exemptions": [
+            {
+                "kb": "KB5034127",
+                "reason": "Scheduled for decommission Q3",
+                "expires": "2026-10-01"
+            }
+        ]
     }
 ]
