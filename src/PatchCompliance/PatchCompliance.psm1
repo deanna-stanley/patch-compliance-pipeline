@@ -1,11 +1,15 @@
-$publicFunctionsPath = Join-Path $PSScriptRoot 'Public'
-Get-ChildItem -Path $publicFunctionsPath -Filter '*.ps1' | ForEach-Object {
-    . $_.FullName
+foreach ($folder in 'Classes', 'Private', 'Public') {
+    $folderPath = Join-Path $PSScriptRoot $folder
+    if (-not (Test-Path $folderPath)) { continue }
+
+    foreach ($file in Get-ChildItem -Path $folderPath -Filter '*.ps1') {
+        try {
+            . $file.FullName
+        } catch {
+            throw "Failed to import $($file.FullName): $_"
+        }
+    }
 }
 
-Export-ModuleMember -Function @(
-    'Get-HostInventory',
-    'Get-ApprovedBaseline',
-    'Test-PatchCompliance',
-    'Write-ComplianceReport'
-)
+$publicFunctions = Get-ChildItem -Path (Join-Path $PSScriptRoot 'Public') -Filter '*.ps1'
+Export-ModuleMember -Function $publicFunctions.BaseName
