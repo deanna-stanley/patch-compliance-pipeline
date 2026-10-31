@@ -7,7 +7,8 @@ function Get-ExemptionStatus {
         [datetime]$AsOfDate = (Get-Date)
     )
 
-    $exemption = $HostRecord.Exemptions | Where-Object { $_.KB -eq $kb }
+    $exemption = $HostRecord.Exemptions | Where-Object { $_.KB -eq $KB } |
+        Sort-Object Expires -Descending | Select-Object -First 1
 
     # The exemption expires at the start of the Expires date
     if ($null -eq $exemption) {
