@@ -7,5 +7,9 @@ function Test-PatchOverdue {
         [hashtable]$OverdueThresholdDays = (Get-DefaultOverdueThresholds)
     )
 
+    if (-not $OverdueThresholdDays.ContainsKey($Severity)) {
+        throw "No overdue threshold defined for severity: $Severity"
+    }
+
     return $Age -gt $OverdueThresholdDays[$Severity]
 }
